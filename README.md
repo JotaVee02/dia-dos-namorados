@@ -8,4 +8,4 @@ O site está hospedado no GitHub Pages e pode ser acessado através do link: [ht
 
 ## Desenvolvido por
 
-Leite Azedo
+João Victor
