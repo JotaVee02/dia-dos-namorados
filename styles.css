@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+}
+
+.message {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.message h1 {
+    color: #ff4b5c;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.message h2 {
+    color: #4ecdc4;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.message p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 1rem 0;
+    color: #333;
+    text-align: justify;
+}
+
+.message .dedication {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.message .signature {
+    text-align: right;
+    font-style: italic;
+    margin-top: 2rem;
+    color: #666;
+}
+
+.poem {
+    padding: 1rem;
+    border-left: 3px solid #ff4b5c;
+}
+
+.poem p {
+    margin: 0.8rem 0;
+}
+
+.heart-animation {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.heart {
+    width: 120px;
+    height: 108px;
+    position: relative;
+    animation: heartBeat 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    left: 60px;
+    top: 0;
+    width: 60px;
+    height: 96px;
+    background: #ff4b5c;
+    border-radius: 60px 60px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 1rem;
+    max-width: 900px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.message {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.message h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.message h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.message p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 1rem 0;
+    color: #333;
+    text-align: justify;
+}
+
+.message .signature {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .message {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+    
+    .message h1 {
+        font-size: 1.5rem;
+    }
+    
+    .message h2 {
+        font-size: 1.2rem;
+    }
+    
+    .message p {
+        font-size: 0.9rem;
+        margin: 0.8rem 0;
+    }
+    
+    .heart {
+        width: 80px;
+        height: 72px;
+    }
+}
