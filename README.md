@@ -4,7 +4,7 @@ Este é um site especial criado para celebrar o Dia dos Namorados com Anna Gabri
 
 ## Como acessar
 
-O site está hospedado no GitHub Pages e pode ser acessado através do link: [https://JotaVee02.github.io/dia-dos-namorados/](https://leiteazedo.github.io/dia-dos-namorados/)
+O site está hospedado no GitHub Pages e pode ser acessado através do link: [https://jotavee02.github.io/dia-dos-namorados/](https://jotavee02.github.io/dia-dos-namorados/)
 
 ## Desenvolvido por
 
