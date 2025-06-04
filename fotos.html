@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossas Fotos - Anna Gabrielly & Eu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+        .photo-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            color: #666;
+        }
+        .error {
+            color: #ff4b5c;
+            text-align: center;
+            padding: 2rem;
+        }
+        .back-link {
+            display: block;
+            margin: 2rem auto 0 auto;
+            text-align: center;
+            color: #ff4b5c;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nossas Fotos</h1>
+        <div class="gallery" id="photoGallery">
+            <!-- As fotos serão carregadas dinamicamente -->
+        </div>
+        <div class="loading" id="loadingMessage">
+            Carregando fotos...
+        </div>
+        <a class="back-link" href="index.html">← Voltar para a mensagem</a>
+    </div>
+
+    <script>
+        // Lista das fotos (formato .jpeg)
+        const photos = [
+            'foto1.jpeg',
+            'foto2.jpeg',
+            'foto3.jpeg',
+            'foto4.jpeg',
+            'foto5.jpeg',
+            'foto6.jpeg',
+            'foto7.jpeg'
+        ];
+
+        // Função para criar um card de foto
+        function createPhotoCard(photoName) {
+            return `
+                <div class="photo-card">
+                    <img src="fotos/${photoName}" alt="Nossa foto" />
+                </div>
+            `;
+        }
+
+        // Carregar as fotos
+        function loadPhotos() {
+            const gallery = document.getElementById('photoGallery');
+            const loading = document.getElementById('loadingMessage');
+            
+            // Primeiro, esconde a mensagem de carregamento
+            loading.style.display = 'none';
+            
+            // Adiciona cada foto ao grid
+            photos.forEach(photo => {
+                gallery.innerHTML += createPhotoCard(photo);
+            });
+        }
+
+        // Carregar as fotos quando a página carregar
+        window.addEventListener('load', loadPhotos);
+    </script>
+</body>
+</html>
