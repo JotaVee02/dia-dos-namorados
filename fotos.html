@@ -125,7 +125,7 @@
     </div>
 
     <script>
-        // Array com os nomes das fotos
+        // Array com os nomes das fotos (ordenadas corretamente)
         const photos = [
             'fotos/foto1.jpeg',
             'fotos/foto2.jpeg',
@@ -136,8 +136,13 @@
             'fotos/foto7.jpeg',
             'fotos/foto8.jpeg',
             'fotos/foto9.jpeg',
-            'fotos/foto10.jpeg'
-        ];
+            'fotos/foto10.jpeg'  // Esta é a última foto
+        ].sort((a, b) => {
+            // Ordena corretamente os números (1,2,3...10 em vez de 1,10,2,3...)
+            const numA = parseInt(a.match(/foto(\d+)/)[1]);
+            const numB = parseInt(b.match(/foto(\d+)/)[1]);
+            return numA - numB;
+        });
 
         // Função para criar um card de foto
         function createPhotoCard(photoName) {
