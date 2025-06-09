@@ -24,6 +24,18 @@
     z-index: 0;
 }
 
+/* Container dos corações */
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
 /* Estilos base */
 :root {
     --primary-color: #ff6b6b;
