@@ -127,20 +127,20 @@
     <script>
         // Array com os nomes das fotos (ordenadas corretamente)
         const photos = [
-            'fotos/foto1.jpeg',
-            'fotos/foto2.jpeg',
-            'fotos/foto3.jpeg',
-            'fotos/foto4.jpeg',
-            'fotos/foto5.jpeg',
-            'fotos/foto6.jpeg',
-            'fotos/foto7.jpeg',
-            'fotos/foto8.jpeg',
-            'fotos/foto9.jpeg',
-            'fotos/foto10.jpeg'  // Esta é a última foto
+            'fotos/foto1.JPEG',
+            'fotos/foto2.JPEG',
+            'fotos/foto3.JPEG',
+            'fotos/foto4.JPEG',
+            'fotos/foto5.JPEG',
+            'fotos/foto6.JPEG',
+            'fotos/foto7.JPEG',
+            'fotos/foto8.JPEG',
+            'fotos/foto9.JPEG',
+            'fotos/foto10.JPEG'  // Esta é a última foto
         ].sort((a, b) => {
             // Ordena corretamente os números (1,2,3...10 em vez de 1,10,2,3...)
-            const numA = parseInt(a.match(/foto(\d+)/)[1]);
-            const numB = parseInt(b.match(/foto(\d+)/)[1]);
+            const numA = parseInt(a.match(/foto(\d+)/i)[1]);
+            const numB = parseInt(b.match(/foto(\d+)/i)[1]);
             return numA - numB;
         });
 
