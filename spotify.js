@@ -14,10 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return null;
     }
 
-    // URL da música específica que você quer tocar
-    // Se quiser usar a playlist completa, descomente a linha da playlist e comente a da música
-    const spotifyUrl = 'https://open.spotify.com/track/2o2xhyri4aJUtgMGkf5P0J?si=-zcDYwDZQmCZpk7mUjBTtA';
-    // const spotifyUrl = 'https://open.spotify.com/playlist/0iqiAiDsWTZfc20aemNJBw?si=8F519ggzSf-tgZ8vzEu8RQ';
+    // URL da playlist completa
+    const spotifyUrl = 'https://open.spotify.com/playlist/0iqiAiDsWTZfc20aemNJBw?si=8F519ggzSf-tgZ8vzEu8RQ';
     
     try {
         const spotifyData = getSpotifyId(spotifyUrl);
