@@ -1,14 +1,13 @@
-const CACHE_NAME = 'annas-love-v1';
+const CACHE_NAME = 'annas-love-v2';
 const urlsToCache = [
   '/',
   '/index.html',
   '/styles.css',
-  '/js/music.js',
+  '/js/hearts.js',
   '/fotos.html',
   '/manifest.json',
-  '/musica/musica.mp3',
-  '/images/icon-192x192.png',
-  '/images/icon-512x512.png'
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css',
+  'https://open.spotify.com/embed/playlist/0iqiAiDsWTZfc20aemNJBw?theme=0'
 ];
 
 // Instalação do Service Worker

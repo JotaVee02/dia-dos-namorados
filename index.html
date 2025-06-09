@@ -2,82 +2,33 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ff6b6b">
+    <meta name="description" content="Um presente especial de amor para Anna Gabrielly">
     <title>Para Anna Gabrielly</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#ff6b6b">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-icon" href="images/icon-192x192.png">
-    <!-- Scripts -->
-    <script>
-        // Função para abrir o Spotify
-        function openSpotify() {
-            // Tenta abrir o app
-            window.location.href = 'spotify:playlist:0iqiAiDsWTZfc20aemNJBw';
-            
-            // Se não abrir o app, redireciona para a web
-            setTimeout(function() {
-                window.open('https://open.spotify.com/playlist/0iqiAiDsWTZfc20aemNJBw', '_blank');
-            }, 200);
-        }
-    </script>
-    <script src="js/hearts.js" defer></script>
-    <script src="js/spotify.js" defer></script>
 </head>
 <body>
+    <div id="hearts-container"></div>
+    
     <div class="container">
-        <div class="heart-animation">
-            <div class="heart"></div>
-        </div>
         <div class="message">
-            <div style="margin-bottom: 2rem;">
-                <a href="fotos.html" style="display: inline-block; padding: 10px 20px; background: #ff4b5c; color: white; text-decoration: none; border-radius: 25px;">
-                    📸 Ver Nossas Fotos
+            <h1>Para Anna Gabrielly</h1>
+            
+            <div class="content-section" style="text-align: center;">
+                <a href="fotos.html" class="btn">
+                    <i class="fas fa-images"></i> Ver Nossas Fotos
                 </a>
             </div>
-            <h1>Para Anna Gabrielly</h1>
-            <p class="dedication">Querida, amor da minha vida!</p>
-            <!-- Player do Spotify -->
-            <div class="spotify-player">
-                <h3>Nossa Música Especial</h3>
-                <iframe 
-                    id="spotifyPlayer"
-                    title="Player do Spotify"
-                    src=""
-                    width="100%"
-                    height="500"
-                    frameBorder="0"
-                    allowtransparency="true"
-                    allow="encrypted-media; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"
-                    style="border: none; border-radius: 12px;"
-                    aria-label="Player de música do Spotify">
-                </iframe>
-                <p class="spotify-note">A playlist pode demorar alguns segundos para carregar</p>
-                <div class="spotify-actions">
-                    <button onclick="openSpotify()" class="spotify-button">
-                        <i class="fab fa-spotify"></i> Abrir no Spotify
-                    </button>
-                </div>
-            </div>
-
-            <div class="poema">
+            <div class="content-section">
                 <h2>Você em Cada Palavra</h2>
                 <p>Meu coração, te escrevo com a alma inteira,</p>
                 <p>Neste dia em que o amor floresce de maneira verdadeira.</p>
                 <p>Vida, é contigo que tudo faz sentido,</p>
                 <p>Cada momento ao teu lado é um sonho bem vivido.</p>
-                
-                <p>Meu bem, és mais que amor, és meu lar,</p>
-                <p>A razão do meu sorriso, meu porto, meu lugar.</p>
-                <p>Amor da minha vida, és riso, ternura e chama,</p>
-                <p>A que me entende no silêncio, a que me acalma e me ama.</p>
                 
                 <p>Minha paçoca doce, no meu peito fez morada,</p>
                 <p>Entre risos, apelidos e conversas na madrugada.</p>
@@ -101,19 +52,54 @@
             </div>
         </div>
     </div>
+    <!-- Player do Spotify -->
+    <div class="content-section">
+        <h2>Nossa Playlist Especial</h2>
+        <div class="spotify-container">
+            <div class="spotify-player">
+                <iframe id="spotifyPlayer" 
+                        title="Player do Spotify"
+                        src=""
+                        width="100%"
+                        height="380"
+                        frameborder="0"
+                        allowtransparency="true"
+                        allow="encrypted-media"
+                        style="border: none; border-radius: 12px;">
+                </iframe>
+                <div class="spotify-actions">
+                    <a href="https://open.spotify.com/playlist/0iqiAiDsWTZfc20aemNJBw" target="_blank" class="spotify-button">
+                        <i class="fab fa-spotify"></i> Abrir no Spotify
+                    </a>
+                </div>
+            </div>
+            <div class="spotify-note">
+                <p><i class="fas fa-info-circle"></i> Para ouvir músicas completas, abra no aplicativo do Spotify.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/hearts.js"></script>
     <script>
-        // Registrar Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+        // Inicializar o player do Spotify
+        document.addEventListener('DOMContentLoaded', function() {
+            const player = document.getElementById('spotifyPlayer');
+            if (player) {
+                player.src = 'https://open.spotify.com/embed/playlist/0iqiAiDsWTZfc20aemNJBw?theme=0';
+            }
+            
+            // Registrar Service Worker
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js')
                     .then(registration => {
                         console.log('ServiceWorker registrado com sucesso:', registration.scope);
                     })
                     .catch(error => {
                         console.log('Falha ao registrar o ServiceWorker:', error);
                     });
-            });
-        }
+            }
+        });
     </script>
 </body>
 </html>

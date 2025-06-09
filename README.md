@@ -1,26 +1,30 @@
-# Dia dos Namorados - Para Anna Gabrielly
+# 💝 Dia dos Namorados - Para Anna Gabrielly
 
-Este é um site especial criado para celebrar o Dia dos Namorados com Anna Gabrielly, contendo mensagens românticas, fotos e músicas especiais.
+Um site especial criado com muito amor para celebrar o seu relacionamento com Anna Gabrielly. Inclui mensagens românticas, uma galeria de fotos e uma playlist especial no Spotify.
 
-## 🎵 Música do Spotify
+## ✨ Recursos
 
-O site agora inclui um player do Spotify para tocar sua música especial:
+- 💌 Mensagem e poema romântico
+- 📸 Galeria de fotos interativa
+- 🎵 Player do Spotify integrado
+- 📱 Design responsivo para todos os dispositivos
+- ⚡ Carregamento rápido com Service Worker
+- 📲 Funciona offline após o primeiro acesso
+
+## 🎵 Nossa Playlist no Spotify
+
+O site inclui uma playlist especial que pode ser reproduzida diretamente da página:
 - Player oficial do Spotify
-- Controles de reprodução
+- Controles de reprodução completos
 - Funciona em todos os dispositivos
-- Sem necessidade de fazer upload de arquivos
+- Botão para abrir no aplicativo do Spotify
 
-### Como Adicionar sua Música do Spotify
+### Como Alterar a Playlist
 
-1. Encontre a música ou playlist no Spotify
-2. Clique nos 3 pontos "..." ao lado da música
+1. Acesse sua playlist no Spotify
+2. Clique nos 3 pontos "..." ao lado da playlist
 3. Selecione "Compartilhar" e depois "Copiar link do Spotify"
-4. Cole o link no arquivo `js/spotify.js` na variável `spotifyUrl`
-
-Exemplo:
-```javascript
-const spotifyUrl = 'https://open.spotify.com/track/SEU_ID_DA_MUSICA';
-```
+4. Cole o link no arquivo `index.html` na tag iframe do Spotify
 
 ## 📱 Como Usar no Celular
 
@@ -31,23 +35,31 @@ const spotifyUrl = 'https://open.spotify.com/track/SEU_ID_DA_MUSICA';
 
 ## 📸 Galeria de Fotos
 
-Adicione fotos na pasta `fotos/` (nomeie como foto1.jpg, foto2.jpg, etc.)
+Para adicionar mais fotos:
+1. Adicione as imagens na pasta `fotos/`
+2. Atualize a lista de fotos no arquivo `fotos.html`
 
 ## 🌐 Como Acessar
 
-O site está hospedado no GitHub Pages e pode ser acessado através do link: 
+O site está hospedado no GitHub Pages e pode ser acessado através do link:
 [https://JotaVee02.github.io/dia-dos-namorados/](https://JotaVee02.github.io/dia-dos-namorados/)
 
 ## 🛠️ Personalização
 
-- **Mensagem**: Edite o arquivo `index.html` para alterar o poema
+- **Mensagem**: Edite o arquivo `index.html` para alterar o poema e as mensagens
 - **Cores**: Personalize as cores no arquivo `styles.css`
-- **Música**: Substitua o arquivo na pasta `musica/`
+- **Fotos**: Adicione suas fotos na pasta `fotos/`
+- **Música**: Atualize o link da playlist do Spotify no `index.html`
 
-## 📝 Observações
+## 📝 Dicas
 
-- Em alguns dispositivos iOS, a música pode não tocar automaticamente
-- Certifique-se de ter os direitos para usar as músicas adicionadas
+- Para melhor experiência, use a versão mais recente do seu navegador
+- O site funciona melhor com conexão à internet para carregar as músicas do Spotify
+- As fotos são carregadas de forma otimizada para melhor desempenho
+
+## 💖 Créditos
+
+Criado com ❤️ por você para Anna Gabrielly
 
 ## 👨‍💻 Desenvolvido por
 
