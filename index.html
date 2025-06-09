@@ -14,8 +14,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="apple-touch-icon" href="images/icon-192x192.png">
-    <script src="js/spotify.js"></script>
-    <script src="js/hearts.js"></script>
+    <!-- Scripts -->
     <script>
         // Função para abrir o Spotify
         function openSpotify() {
@@ -24,10 +23,12 @@
             
             // Se não abrir o app, redireciona para a web
             setTimeout(function() {
-                window.location.href = 'https://open.spotify.com/playlist/0iqiAiDsWTZfc20aemNJBw';
+                window.open('https://open.spotify.com/playlist/0iqiAiDsWTZfc20aemNJBw', '_blank');
             }, 200);
         }
     </script>
+    <script src="js/hearts.js" defer></script>
+    <script src="js/spotify.js" defer></script>
 </head>
 <body>
     <div class="container">
