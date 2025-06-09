@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (spotifyId) {
         const embedUrl = isPlaylist
-            ? `https://open.spotify.com/embed/playlist/${spotifyId}?utm_source=generator&theme=0`
-            : `https://open.spotify.com/embed/track/${spotifyId}?utm_source=generator&theme=0`;
+            ? `https://open.spotify.com/playlist/0iqiAiDsWTZfc20aemNJBw?si=8F519ggzSf-tgZ8vzEu8RQ&pt=cbbf53fd34225751f113aa84238fda08&pi=AZv9ofeQSniHN`
+            : `https://open.spotify.com/track/2o2xhyri4aJUtgMGkf5P0J?si=-zcDYwDZQmCZpk7mUjBTtA`;
         
         document.getElementById('spotifyPlayer').src = embedUrl;
     } else {
