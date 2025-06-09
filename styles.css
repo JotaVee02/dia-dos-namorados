@@ -11,6 +11,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -58,7 +61,7 @@ body {
 .message .signature {
     text-align: right;
     font-style: italic;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     color: #666;
 }
 
@@ -183,4 +186,35 @@ body {
         width: 80px;
         height: 72px;
     }
+}
+
+/* Estilos do Player do Spotify */
+.spotify-player {
+    background: rgba(29, 185, 84, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 2rem 0;
+    text-align: center;
+    border: 1px solid rgba(29, 185, 84, 0.2);
+}
+
+.spotify-player h3 {
+    color: #1DB954;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.spotify-player iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+}
+
+.spotify-note {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
 }
