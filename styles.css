@@ -587,6 +587,35 @@ body {
     margin-right: 5px;
 }
 
+/* Botão de voltar */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-button i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-3px);
+}
+
+.back-button:hover i {
+    transform: translateX(-3px);
+}
+
 /* Estilo do botão do Spotify */
 .spotify-actions {
     display: flex;
