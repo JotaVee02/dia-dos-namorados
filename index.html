@@ -14,7 +14,20 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="apple-touch-icon" href="images/icon-192x192.png">
-    <script src="js/spotify.js" defer></script>
+    <script src="js/spotify.js"></script>
+    <script src="js/hearts.js"></script>
+    <script>
+        // Função para abrir o Spotify
+        function openSpotify() {
+            // Tenta abrir o app
+            window.location.href = 'spotify:playlist:0iqiAiDsWTZfc20aemNJBw';
+            
+            // Se não abrir o app, redireciona para a web
+            setTimeout(function() {
+                window.location.href = 'https://open.spotify.com/playlist/0iqiAiDsWTZfc20aemNJBw';
+            }, 200);
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -47,9 +60,9 @@
                 </iframe>
                 <p class="spotify-note">A playlist pode demorar alguns segundos para carregar</p>
                 <div class="spotify-actions">
-                    <a href="spotify:playlist:0iqiAiDsWTZfc20aemNJBw" class="spotify-button">
+                    <button onclick="openSpotify()" class="spotify-button">
                         <i class="fab fa-spotify"></i> Abrir no Spotify
-                    </a>
+                    </button>
                 </div>
             </div>
 
